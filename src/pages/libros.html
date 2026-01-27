@@ -2,9 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/TwqtsjHM/libro.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
+    <title>Libros</title>
 </head>
 <body>
     <!--Nav-->
@@ -42,7 +41,7 @@
               />
             </svg>
             <span
-              id="cart-count"
+              id="carrito-contador"
               class="absolute -top-1 -right-1 bg-orange-400 text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center text-white"
             >
               0
@@ -102,8 +101,15 @@
         </div>
       </div>
     </nav>
+<!--GRID-->
+<section class="bg-orange-100 min-h-screen mx-auto px-4 py-10"> 
+    <h2 class="text-3xl font-black text-orange-500 mb-8 border-1-4 border-orange-800 pl-4 uppercase">Explorar <span class="text-orange-700">Libros</span"></h2>
+    <div id="contenedor-libros" class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <p class="text-orange-500 text-center col-span-full">Conectando con la tienda...</p>
+    </div>
+</section>
 
-    <!--Main.js-->
-    <script type="module" src="../js/nosotros.js"></script>
+<!--Main.js-->
+    <script type="module" src="../js/libros.js"></script>
 </body>
 </html>

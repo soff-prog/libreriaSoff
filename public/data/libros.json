@@ -1,0 +1,37 @@
+[
+    {
+        "titulo": "Cien años de soledad",
+        "precio": 15,
+        "imagen": "/images/libro1.webp"
+    },
+    {
+        "titulo": "Bouleverd",
+        "precio": 22,
+        "imagen": "/images/imagen2.jpg"
+    },
+    {
+        "titulo": "Donde todo brilla",
+        "precio": 20,
+        "imagen": "/images/imagen3.jpg"
+    },
+    {
+        "titulo": "Nosotros en la luna",
+        "precio": 19.50,
+        "imagen": "/images/images4.png"
+    },
+    {
+        "titulo": "Todo lo que somos juntos",
+        "precio": 19.50,
+        "imagen": "/images/imagen5.jfif"
+    },
+    {
+        "titulo": "Dimelo Bajito",
+        "precio": 19.50,
+        "imagen": "/images/imagen6.jpg"
+    },
+    {
+        "titulo": "Meridia",
+        "precio": 19.50,
+        "imagen": "/images/imagen7.jfif"
+    }
+]
