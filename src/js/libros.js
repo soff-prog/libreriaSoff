@@ -57,30 +57,29 @@ cargarTienda();
 
 
 //localStorage
-//Intentar recuperar los libros elegidos o seleccionados por el usuario
-let carrito = JSON.parse(localStorage.getItem("carrito-libros"))
+//Intentar recuperar los libros elegidos o seleccionados por el usuario y si no elige ninguno no nos devuelve nada
+let carrito = JSON.parse(localStorage.getItem("carrito-libros"))||[];
 
 //Funcion para actualizar el carrito
 const actualizarContado = () =>{
     const contador  = document.getElementById("carrito-contador");
     //si existe el contador le pongamos la longitud deñ carrito
-    if(contador) contador.innerText=carrito.length;
+    if(contador) 
+        contador.innerText=carrito.length;
+};
     contenedor.addEventListener("click" , (e) =>{
-        const boton = e.target.closets("btn-agregar");
+        const boton = e.target.closest(".btn-agregar");
         if(boton){
             const title = boton.dataset.titulo;
             const price = boton.dataset.precio;
 
             //crear un objeto con la informacion del libro
-            const libro = {
-                titulo: title,
-                precio: price
-            };
+            const libro = {titulo:title,precio:price };
 
             //agregar al carrito
             carrito.push(libro);
 
             localStorage.setItem("carrito-libros", JSON.stringify(carrito));
+            actualizarContado();
         }
     })
-}
