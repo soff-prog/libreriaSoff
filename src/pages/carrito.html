@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+</head>
+<body>
+    <!--Nav-->
+<nav class="bg-orange-50 border-b border-orange-200 sticky top-0 z-50">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <span
+            class="self-center text-2xl font-black whitespace-nowrap text-orange-400 tracking-tighter"
+          >
+            Book<span class="text-orange-700">Lab</span>
+          </span>
+        </a>
+
+        <div
+          class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center gap-4"
+        >
+          <a
+            href="/src/pages/carrito.html"
+            class="relative bg-orange-700 p-2 rounded-full border border-orange-800 hover:border-orange-600 transition group"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-white group-hover:text-orange-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+              />
+            </svg>
+            <span
+              id="carrito-contador"
+              class="absolute -top-1 -right-1 bg-orange-400 text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center text-white"
+            >
+              0
+            </span>
+          </a>
+
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black rounded-lg md:hidden hover:bg-orange-100 focus:outline-none"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-orange-300 rounded-lg bg-orange-200 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent"
+          >
+            <li>
+              <a
+                href="/index.html"
+                class="block py-2 px-3 text-orange-600 rounded-sm md:p-0 font-bold"
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a
+                href="/src/pages/nosotros.html"
+                class="block py-2 px-3 text-black rounded-sm hover:text-orange-600 md:p-0 transition"
+                >Nosotros</a
+              >
+            </li>
+            <li>
+              <a
+                href="/src/pages/libros.html"
+                class="block py-2 px-3 text-black rounded-sm hover:text-orange-600 md:p-0 transition"
+                >Libros</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--CARRITO-->
+    <br>
+    <div class="max-w-screen-xl mx-auto p.4">
+        <h1 class="text-3x1 font-black text-orange-700 mb-8 uppercase">
+            Tu <span class="text-black">Carrito</span>
+        </h1>
+        <div id="lista-carrito" class="space-y-4"></div>
+
+        <div class="mt-10 border-stone-800 pt-6 flex justify-between items-center">
+            <span class="text-x1 font-bold">Total: </span>
+            <span id="total-compra" class="text-3xl font-black text-orange-700">$0.00</span>
+        </div>
+    </div>
+
+    <!--JS-->
+    <script type="module" src="../js/carrito.js"></script>
+</body>
+</html>
