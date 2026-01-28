@@ -82,4 +82,5 @@ const actualizarContado = () =>{
             localStorage.setItem("carrito-libros", JSON.stringify(carrito));
             actualizarContado();
         }
-    })
+    });
+    actualizarContado();
