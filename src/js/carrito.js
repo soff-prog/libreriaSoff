@@ -20,7 +20,7 @@ const mostrarCarrito= ()=>{
             <div class="flex justify-between items-center border-b border-slate-700 py-4">
                 <p class="font-bold">${libro.titulo}</p>
                 <div class="flex items-center gap-4">
-                    <span class="text-orange-900 font-bold">$${libro.precio}</span>
+                    <span class="text-cyan-400 font-bold">$${libro.precio}</span>
                     <button data-index="${index}" class="btn-eliminar text-red-500 text-xs">Eliminar</button>
                 </div>
             </div>
@@ -34,9 +34,10 @@ lista.addEventListener("click", (e) => {
     if(boton){
         const index = parseInt(boton.dataset.index);
         //Eliminar el libro del carrito basandose en la posicion seleccionada
-        librosCarrito.splice(index, 1); //splice es un metodo para eliminar
+        libroCarrito.splice(index, 1); //splice es un metodo para eliminar
         //actualizar los datos
-        localStorage.setItem("carrito-libros", JSON.stringify(librosCarrito));
+        localStorage.setItem("carrito-libros", JSON.stringify(libroCarrito));
+        mostrarCarrito();
     }
 })
 mostrarCarrito();
