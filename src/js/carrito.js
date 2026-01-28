@@ -4,7 +4,7 @@ import 'flowbite';
 
 const lista = document.getElementById("lista-carrito");
 const totalPago= document.getElementById("total-compra");
-//const botonLimpiar = document.getElementById("btn-limpiar");
+
 
 //traer la informacion de la memoria del localStorege
 let libroCarrito = JSON.parse(localStorage.getItem("carrito-libros"))||[];
@@ -51,4 +51,3 @@ lista.addEventListener("click", (e) => {
 })
 mostrarCarrito();
 
-//botonLimpiar.addEventListener('click', );
