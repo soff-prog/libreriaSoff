@@ -4,9 +4,17 @@ import 'flowbite';
 
 const lista = document.getElementById("lista-carrito");
 const totalPago= document.getElementById("total-compra");
+//const botonLimpiar = document.getElementById("btn-limpiar");
 
 //traer la informacion de la memoria del localStorege
 let libroCarrito = JSON.parse(localStorage.getItem("carrito-libros"))||[];
+
+const actualizarContado = () =>{
+    const contador  = document.getElementById("carrito-contador");
+    //si existe el contador le pongamos la longitud deñ carrito
+    if(contador) 
+        contador.innerText=libroCarrito.length;
+};
 
 const mostrarCarrito= ()=>{
     lista.innerHTML = "";
@@ -27,6 +35,7 @@ const mostrarCarrito= ()=>{
         `;
     });
 totalPago.innerText=`$${total.toFixed(2)}`;
+actualizarContado();
 ;}
 
 lista.addEventListener("click", (e) => {
@@ -41,3 +50,5 @@ lista.addEventListener("click", (e) => {
     }
 })
 mostrarCarrito();
+
+//botonLimpiar.addEventListener('click', );
