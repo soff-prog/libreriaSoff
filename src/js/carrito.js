@@ -20,8 +20,8 @@ const mostrarCarrito= ()=>{
             <div class="flex justify-between items-center border-b border-slate-700 py-4">
                 <p class="font-bold">${libro.titulo}</p>
                 <div class="flex items-center gap-4">
-                    <span class="text-cyan-400 font-bold">$${libro.precio}</span>
-                    <button data-index="${index}" class="btn-eliminar text-red-500 text-xs">Eliminar</button>
+                    <span class="text-orange-600 font-bold">$${libro.precio}</span>
+                    <button data-index="${index}" class="btn-eliminar text-red-800 text-xs">Eliminar</button>
                 </div>
             </div>
         `;
