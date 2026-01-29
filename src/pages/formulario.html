@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libros</title>
+    <title>Formulario</title>
 </head>
 <body>
     <!--Nav-->
@@ -108,15 +108,87 @@
         </div>
       </div>
     </nav>
-<!--GRID-->
-<section class="bg-orange-100 min-h-screen mx-auto px-4 py-10"> 
-    <h2 class="text-3xl font-black text-orange-500 mb-8 border-1-4 border-orange-800 pl-4 uppercase">Explorar <span class="text-orange-700">Libros</span"></h2>
-    <div id="contenedor-libros" class="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <p class="text-orange-500 text-center col-span-full">Conectando con la tienda...</p>
-    </div>
-</section>
+<!--Formulario-->
+    <section class="bg-orange-200 min-h-screen flex items-center justify-center p-4">
+      <form id="formulario" class="bg-orange-300 p-8 rounded-xl shadow-2xl w-full max-w-md border border-orange-800">
+        <h2 class="text-2xl font-bold text-orange-500 mb-6 border-l-4 border-orange-900 pl-3 uppercase">
+          Registro <span class="text-orange-900">BookLab</span>
+        </h2>
 
-<!--Main.js-->
-    <script type="module" src="../js/libros.js"></script>
+        <div class="mb-4">
+          <label class="block text-slate-700 text-sm mb-2"
+            >Nombre Completo</label
+          >
+          <input
+            type="text"
+            id="username"
+            placeholder="Juan Pérez"
+            class="w-full bg-yellow-50 border border-black rounded-lg p-2.5 text-black focus:ring-2 focus:ring-orange-500 outline-none transition-all text-sm"
+          />
+          <span
+            id="error-username"
+            class="text-red-500 text-[10px] mt-1 hidden italic"
+            >Debe tener entre 3 y 16 letras.</span
+          >
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-slate-700 text-sm mb-2">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="correo@ejemplo.com"
+            class="w-full bg-yellow-50 border border-black rounded-lg p-2.5 text-black focus:ring-2 focus:ring-orange-500 outline-none transition-all text-sm"
+          />
+          <span
+            id="error-email"
+            class="text-red-500 text-[10px] mt-1 hidden italic"
+            >Email no válido.</span
+          >
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-slate-700 text-sm mb-2">Contraseña</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="••••••••"
+            class="w-full bg-yellow-50 border border-black rounded-lg p-2.5 text-black focus:ring-2 focus:ring-orange-500 outline-none transition-all text-sm"
+          />
+          <span
+            id="error-password"
+            class="text-red-500 text-[10px] mt-1 hidden italic"
+            >Mínimo 8 caracteres, 1 letra y 1 número.</span
+          >
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-slate-700 text-sm mb-2"
+            >Confirmar Contraseña</label
+          >
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="••••••••"
+            class="w-full bg-yellow-50 border border-black rounded-lg p-2.5 text-black focus:ring-2 focus:ring-orange-500 outline-none transition-all text-sm"
+          />
+          <span
+            id="error-confirmPassword"
+            class="text-red-500 text-[10px] mt-1 hidden italic"
+            >Las contraseñas no coinciden.</span
+          >
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 rounded-lg transition-colors uppercase tracking-widest"
+        >
+          Finalizar Registro
+        </button>
+      </form>
+    </section>
+
+    <!--JS-->
+    <script type="module" src="../js/formulario.js"></script>
 </body>
 </html>
